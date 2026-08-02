@@ -13,8 +13,8 @@ const mockProjects = [
         tech: ["Batch", "Registry", "Windows"], 
         status: "Live", 
         statusClass: "completed",
-        download: "downloads/VxidTweaks.zip",
-        image: "assets/tweaks_screenshot.png"
+        download: "VxidTweaks.zip",
+        image: "tweaks_screenshot.png"
     }
 ];
 
@@ -24,7 +24,7 @@ const mockDownloads = [
         desc: "The ultimate PC optimization script. Lowers input lag by ~4% and increases FPS by ~1-3%. Includes a 100% safe Revert option.", 
         meta: "11 KB - Script", 
         category: "scripts", 
-        file: "downloads/VxidTweaks.zip" 
+        file: "VxidTweaks.zip" 
     }
 ];
 
