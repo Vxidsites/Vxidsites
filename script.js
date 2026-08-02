@@ -29,10 +29,10 @@ const mockDownloads = [
 ];
 
 const mockVideos = [
-    { title: "Video 1", url: "https://www.youtube.com/watch?v=J0WEqQhg6_A&t=2s", id: "J0WEqQhg6_A" },
-    { title: "Video 2", url: "https://www.youtube.com/watch?v=3IDIbszLATM&t=23s", id: "3IDIbszLATM" },
-    { title: "Video 3", url: "https://www.youtube.com/watch?v=yWBlp6vId9k", id: "yWBlp6vId9k" },
-    { title: "Video 4", url: "https://www.youtube.com/watch?v=09d5_2EO5gs", id: "09d5_2EO5gs" }
+    { title: "Minecraft Tutorial 1", url: "https://www.youtube.com/watch?v=J0WEqQhg6_A&t=2s", id: "J0WEqQhg6_A", category: "minecraft" },
+    { title: "Minecraft Tutorial 2", url: "https://www.youtube.com/watch?v=3IDIbszLATM&t=23s", id: "3IDIbszLATM", category: "minecraft" },
+    { title: "GTA Modding Guide", url: "https://www.youtube.com/watch?v=yWBlp6vId9k", id: "yWBlp6vId9k", category: "gta" },
+    { title: "Hacked Client Setup", url: "https://www.youtube.com/watch?v=09d5_2EO5gs", id: "09d5_2EO5gs", category: "hacked-clients" }
 ];
 
 const mockUpcoming = [
@@ -174,14 +174,26 @@ function renderDownloads(category = 'all') {
     `).join('');
 }
 
-function renderYouTube() {
+function renderYouTube(category = 'all') {
     const container = document.getElementById('youtube-container');
     if (!container) return;
     
-    container.innerHTML = mockVideos.map(v => `
-        <a href="${v.url}" target="_blank" class="video-card glass fade-in">
-            <div class="video-thumb" style="background-image: url('https://img.youtube.com/vi/${v.id}/hqdefault.jpg'); background-size: cover; background-position: center;">
+    const filtered = category === 'all' 
+        ? mockVideos 
+        : mockVideos.filter(v => v.category === category);
+
+    if (filtered.length === 0) {
+        container.innerHTML = `<p style="color: var(--text-muted); grid-column: 1 / -1; text-align: center;">More ${category.replace('-', ' ')} videos coming soon.</p>`;
+        return;
+    }
+
+    container.innerHTML = filtered.map(v => `
+        <a href="${v.url}" target="_blank" class="video-card glass fade-in" style="display: flex; flex-direction: column; text-decoration: none;">
+            <div class="video-thumb" style="background-image: url('https://img.youtube.com/vi/${v.id}/hqdefault.jpg'); background-size: cover; background-position: center; border-radius: 8px 8px 0 0; flex: 1; min-height: 200px;">
                 <i class="fab fa-youtube" style="z-index: 2; position: relative;"></i>
+            </div>
+            <div style="padding: 1rem; text-align: center; background: rgba(0,0,0,0.2); border-radius: 0 0 8px 8px;">
+                <h4 style="color: var(--text-main); font-size: 0.95rem; margin: 0;">${v.title}</h4>
             </div>
         </a>
     `).join('');
@@ -282,11 +294,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Download Filters
-    document.querySelectorAll('.filter-btn').forEach(btn => {
+    document.querySelectorAll('#download-categories .filter-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('#download-categories .filter-btn').forEach(b => b.classList.remove('active'));
             e.target.classList.add('active');
             renderDownloads(e.target.getAttribute('data-category'));
+        });
+    });
+
+    // YouTube Filters
+    document.querySelectorAll('#youtube-categories .filter-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelectorAll('#youtube-categories .filter-btn').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            renderYouTube(e.target.getAttribute('data-category'));
         });
     });
 
