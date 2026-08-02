@@ -31,7 +31,7 @@ const mockDownloads = [
 const mockVideos = [
     { title: "SKLauncher Setup", url: "https://www.youtube.com/watch?v=J0WEqQhg6_A&t=2s", id: "J0WEqQhg6_A", category: "hacked-clients" },
     { title: "YimMenu V2 GTA Mod Menu", url: "https://www.youtube.com/watch?v=3IDIbszLATM&t=23s", id: "3IDIbszLATM", category: "gta" },
-    { title: "Minecraft Tutorial", url: "https://www.youtube.com/watch?v=yWBlp6vId9k", id: "yWBlp6vId9k", category: "minecraft" },
+    { title: "Cayo Replay Money Glitch", url: "https://www.youtube.com/watch?v=yWBlp6vId9k", id: "yWBlp6vId9k", category: "gta" },
     { title: "Share Xbox Game Pass", url: "https://www.youtube.com/watch?v=09d5_2EO5gs", id: "09d5_2EO5gs", category: "tutorials" }
 ];
 
