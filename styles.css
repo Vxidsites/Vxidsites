@@ -1,17 +1,17 @@
 :root {
     /* Color Palette - Monochrome Liquid Glass */
     --bg-main: #000000;
-    --bg-secondary: #0a0a0a;
+    --bg-secondary: #050505;
     --accent-primary: #ffffff;
     --accent-secondary: #888888;
     --text-main: #ffffff;
-    --text-muted: #8a8a8a;
+    --text-muted: #9ca3af;
     
     /* Liquid Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.02);
+    --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-blur: 25px;
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    --glass-blur: 30px;
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.9);
     
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -615,6 +615,117 @@ main {
 }
 
 .social-card span { font-size: 1.2rem; font-weight: 600; }
+
+/* GTA 5 Services Section */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.pricing-card {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 16px;
+    transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    border: 1px solid var(--glass-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(255,255,255,0.3);
+    box-shadow: 0 15px 45px rgba(255, 255, 255, 0.05);
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: transparent;
+    transition: var(--transition-fast);
+}
+
+.pricing-card:hover::before {
+    background: var(--accent-primary);
+}
+
+.pricing-tier {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.pricing-price {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.pricing-features li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--text-muted);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.free-run-form {
+    max-width: 600px;
+    margin: 4rem auto 0 auto;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.free-run-form h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.free-run-form p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    background: rgba(0,0,0,0.5);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition-fast);
+}
+
+.form-group input:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
 
 /* Footer */
 footer {

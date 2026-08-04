@@ -82,6 +82,16 @@ function navigateTo(sectionId) {
     document.querySelector('.nav-links').classList.remove('mobile-open');
 }
 
+// GTA 5 Services Form Logic
+function submitSocialClub() {
+    const input = document.getElementById('sc-input');
+    if (input && input.value.trim() !== '') {
+        const username = input.value.trim();
+        alert(`Request received for Social Club: ${username}!\nWe will get your free heist done shortly.`);
+        input.value = '';
+    }
+}
+
 // Data Injection Functions
 function renderProjects() {
     const container = document.getElementById('projects-container');

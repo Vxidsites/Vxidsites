@@ -22,8 +22,8 @@
                 <li><a href="#projects" data-section="projects">Projects</a></li>
                 <li><a href="#downloads" data-section="downloads">Downloads</a></li>
                 <li><a href="#youtube" data-section="youtube">YouTube</a></li>
+                <li><a href="#gta-services" data-section="gta-services">GTA 5 Services</a></li>
                 <li><a href="#upcoming" data-section="upcoming">Upcoming</a></li>
-                <li><a href="#about" data-section="about">About</a></li>
                 <li><a href="#changelog" data-section="changelog">Changelog</a></li>
                 <li><a href="#contact" data-section="contact">Contact</a></li>
             </ul>
@@ -39,9 +39,9 @@
                         <h1 class="hero-title">Welcome to <span class="accent glow">VxidSites</span></h1>
                         <p class="hero-subtitle">I build software, websites, tools, and games. Explore my creations.</p>
                         <div class="hero-buttons">
-                            <a href="#projects" class="btn btn-primary" onclick="navigateTo('projects')">View Projects</a>
-                            <a href="#youtube" class="btn btn-secondary" onclick="navigateTo('youtube')">Watch YouTube</a>
-                            <a href="#downloads" class="btn btn-outline" onclick="navigateTo('downloads')">Download Files</a>
+                            <a href="#gta-services" class="btn btn-primary" onclick="navigateTo('gta-services')">GTA 5 Services</a>
+                            <a href="#projects" class="btn btn-secondary" onclick="navigateTo('projects')">View Projects</a>
+                            <a href="#youtube" class="btn btn-outline" onclick="navigateTo('youtube')">Watch YouTube</a>
                         </div>
                     </div>
                 </div>
@@ -129,23 +129,58 @@
                 </div>
             </section>
 
-            <section id="about" class="page-section hidden">
-                <div class="about-container glass fade-in">
-                    <div class="about-content">
-                        <h2>About Me</h2>
-                        <p>I am a passionate developer with experience in building diverse applications, from full-stack websites to 2D games and utility scripts. My goal is to create high-quality, professional software that solves problems and entertains.</p>
-                        
-                        <div class="skills-section">
-                            <h3>Languages & Tech</h3>
-                            <div class="skills-grid">
-                                <div class="skill-tag"><i class="fab fa-python"></i> Python</div>
-                                <div class="skill-tag"><i class="fab fa-rust"></i> Rust</div>
-                                <div class="skill-tag"><i class="fas fa-moon"></i> Lua/Luau</div>
-                                <div class="skill-tag"><i class="fab fa-js"></i> JavaScript</div>
-                                <div class="skill-tag"><i class="fab fa-html5"></i> HTML/CSS</div>
-                            </div>
-                        </div>
+            <section id="gta-services" class="page-section hidden">
+                <div class="section-header">
+                    <h2>GTA 5 Services</h2>
+                    <p>Professional heist carries and account boosts. Safe, fast, and reliable.</p>
+                </div>
+                
+                <div class="pricing-grid fade-in">
+                    <!-- Starter -->
+                    <div class="pricing-card glass">
+                        <div class="pricing-tier">Starter</div>
+                        <div class="pricing-price">$2</div>
+                        <ul class="pricing-features">
+                            <li>3 Full Heists</li>
+                            <li>Fast Completion</li>
+                            <li>100% Safe</li>
+                        </ul>
+                        <a href="#contact" onclick="navigateTo('contact')" class="btn btn-outline">Purchase</a>
                     </div>
+                    
+                    <!-- Pro -->
+                    <div class="pricing-card glass" style="border-color: var(--accent-primary); transform: scale(1.05);">
+                        <div style="position: absolute; top: 0; left: 0; right: 0; background: var(--accent-primary); color: #000; font-weight: bold; padding: 0.2rem; font-size: 0.8rem;">MOST POPULAR</div>
+                        <div class="pricing-tier" style="color: var(--accent-primary); margin-top: 1rem;">Pro</div>
+                        <div class="pricing-price">$5</div>
+                        <ul class="pricing-features">
+                            <li>6 Full Heists</li>
+                            <li>Priority Completion</li>
+                            <li>Bonus Loot Included</li>
+                        </ul>
+                        <a href="#contact" onclick="navigateTo('contact')" class="btn btn-primary">Purchase</a>
+                    </div>
+                    
+                    <!-- VIP -->
+                    <div class="pricing-card glass">
+                        <div class="pricing-tier">VIP</div>
+                        <div class="pricing-price">$10</div>
+                        <ul class="pricing-features">
+                            <li>7 Heists Daily</li>
+                            <li>Lasts for a Full Week</li>
+                            <li>Maximum Payouts</li>
+                        </ul>
+                        <a href="#contact" onclick="navigateTo('contact')" class="btn btn-outline">Purchase</a>
+                    </div>
+                </div>
+
+                <div class="free-run-form glass fade-in">
+                    <h3>Want a Free Trial?</h3>
+                    <p>Drop your Social Club name and we'll get your free one done first!</p>
+                    <form id="sc-form" class="form-group" onsubmit="event.preventDefault(); submitSocialClub();">
+                        <input type="text" id="sc-input" placeholder="Enter Social Club Username..." required>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </section>
 
