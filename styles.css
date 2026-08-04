@@ -273,6 +273,57 @@ main {
     justify-content: center;
 }
 
+/* New Hero Additions */
+.bg-grid {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    z-index: -1;
+    mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+}
+
+.hero-logo {
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    margin-bottom: 1rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    color: var(--accent-primary);
+    margin-bottom: 0.2rem;
+    text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.stat-item p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* Projects Grid */
 .projects-grid {
     display: grid;

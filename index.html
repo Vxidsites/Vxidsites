@@ -34,15 +34,35 @@
         <main id="main-content">
             <!-- Sections will be injected here via JS or displayed based on scroll/hash -->
             
-            <section id="home" class="page-section active">
+            <section id="home" class="page-section active" style="position: relative; overflow: hidden; min-height: 100vh;">
+                <!-- Background Grid -->
+                <div class="bg-grid"></div>
+
                 <div class="hero">
                     <div class="hero-content fade-in">
+                        <div class="hero-logo">V</div>
                         <h1 class="hero-title">Welcome to <span class="accent glow">VxidSites</span></h1>
                         <p class="hero-subtitle">Premium GTA 5 Heist Carries, PC Optimization Scripts, and Custom Software.</p>
                         <div class="hero-buttons">
                             <a href="#gta-services" class="btn btn-primary" onclick="navigateTo('gta-services')">GTA 5 Services</a>
                             <a href="#projects" class="btn btn-secondary" onclick="navigateTo('projects')">View Projects</a>
                             <a href="#youtube" class="btn btn-outline" onclick="navigateTo('youtube')">Watch YouTube</a>
+                        </div>
+                        
+                        <!-- Hero Stats -->
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <h3>15K+</h3>
+                                <p>Downloads</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>50+</h3>
+                                <p>Carries Done</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>100%</h3>
+                                <p>Safe & Secure</p>
+                            </div>
                         </div>
                     </div>
                 </div>
