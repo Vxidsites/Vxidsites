@@ -37,14 +37,19 @@ const mockVideos = [
 
 const mockUpcoming = [
     { 
-        title: "Classified Project", 
-        date: "Coming Soon", 
-        desc: "We have a HUGE new project currently in the works. Prepare for something completely game-changing. Stay tuned for the reveal.", 
-        progress: 15 
+        title: "Vxid Mod Launcher", 
+        date: "Winter 2026", 
+        desc: "Currently developing a standalone Windows desktop application to manage GTA 5 mods, scripts, and services automatically. Will feature one-click installs and backups.", 
+        progress: 35 
     }
 ];
 
 const mockChangelog = [
+    { 
+        version: "v1.2", 
+        date: "August 2026", 
+        desc: "Launched the new GTA 5 Services tab! Added premium Heist carry packages and a free trial system. Revamped the entire website UI with a darker, high-contrast aesthetic." 
+    },
     { 
         version: "v1.1", 
         date: "August 2026", 
