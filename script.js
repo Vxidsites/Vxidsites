@@ -383,14 +383,14 @@ function copyCryptoAddress() {
 
 // Fake Reviews Data (8 reviews)
 const mockReviews = [
-    { author: "skylar33", rating: 5, text: "Vouch. Bro got me the 3.1M in literally 2 minutes. Easiest money I've ever made in this game." },
-    { author: "jayson.x", rating: 4, text: "Was skeptical at first but he actually instant-finished the heist and gave me the 100% cut. Buying the VIP tier next week." },
-    { author: "kaylaa12", rating: 5, text: "Fastest carry I've ever seen. Didn't even have to leave my apartment in game and the money dropped." },
+    { author: "skylar33", rating: 5, text: "Vouch. He teleported us straight to the vault and instantly finished it. Easiest 3.1M I've ever made." },
+    { author: "jayson.x", rating: 4, text: "Was skeptical at first but he actually gave me the 100% cut in the Casino heist. Buying the VIP tier next week." },
+    { author: "kaylaa12", rating: 5, text: "Fastest carry I've ever seen. Skipped all the preps and we finished the finale in like 2 minutes flat." },
     { author: "drxg", rating: 5, text: "Legit. Recommending to my whole crew so we can finally buy the new oppressors." },
-    { author: "marcus.d", rating: 4, text: "Honestly the best service out here. Zero bans, zero issues, just straight cash to Maze Bank." },
-    { author: "zayy99", rating: 5, text: "Bought the Pro tier for $5. Got all 6 heists done in under 15 minutes. This guy is insane with the mod menu." },
-    { author: "vinceee", rating: 3, text: "Bro actually came through. I thought it was a scam but he did the free trial and I instantly bought more." },
-    { author: "al3x", rating: 5, text: "10/10. He told me to just stand there while the menu did all the work. $3.1M payout confirmed." }
+    { author: "marcus.d", rating: 4, text: "Honestly the best service out here. Used his mod menu to skip the guards and I just grabbed the gold." },
+    { author: "zayy99", rating: 5, text: "Bought the Pro tier for $5. Got all 6 heists done so fast. This guy is insane with the mod menu." },
+    { author: "vinceee", rating: 3, text: "Bro actually came through. I thought it was a scam but he ran the free trial heist and I instantly bought more." },
+    { author: "al3x", rating: 5, text: "10/10. He told me to just follow him in the casino while the menu did all the work. $3.1M payout confirmed." }
 ];
 
 let currentReviewIndex = 0;
