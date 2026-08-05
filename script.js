@@ -474,3 +474,13 @@ function resetSliderInterval() {
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(renderReviews, 100);
 });
+
+// Button Click Sound Effect
+const clickSound = new Audio('ui-soft-click-brukowskij-soft-keyboard-click-gentle-computer-input-2-0m00s.mp3');
+
+document.addEventListener('click', (e) => {
+    if (e.target.closest('.btn') || e.target.closest('button') || e.target.closest('.slider-btn') || e.target.closest('.mobile-menu-btn')) {
+        clickSound.currentTime = 0;
+        clickSound.play().catch(err => console.log('Audio play prevented:', err));
+    }
+});
