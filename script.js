@@ -397,47 +397,43 @@ let currentReviewIndex = 0;
 let reviewInterval;
 
 function renderReviews() {
-    const track = document.getElementById('reviews-track');
     const dotsContainer = document.getElementById('slider-dots');
-    if (!track || !dotsContainer) return;
-
-    // Create cards
-    track.innerHTML = mockReviews.map((r, i) => `
-        <div class="review-card ${i === 0 ? 'active-review' : ''}" data-index="${i}" style="flex: 0 0 100%; box-sizing: border-box;">
-            <div class="review-stars">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-            </div>
-            <p class="review-text">"${r.text}"</p>
-            <div class="review-author">
-                <i class="fab fa-discord" style="color: #5865F2;"></i> @${r.author}
-            </div>
-        </div>
-    `).join('');
-
-    // Create dots
-    dotsContainer.innerHTML = mockReviews.map((_, i) => `
-        <div class="dot ${i === 0 ? 'active' : ''}" onclick="goToReview(${i})"></div>
-    `).join('');
-
+    if (dotsContainer) {
+        dotsContainer.innerHTML = mockReviews.map((_, i) => `
+            <div class="dot ${i === 0 ? 'active' : ''}" onclick="goToReview(${i})"></div>
+        `).join('');
+    }
+    updateSliderPosition();
     startReviewSlider();
 }
 
 function updateSliderPosition() {
-    const track = document.getElementById('reviews-track');
-    if(track) {
-        track.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
-    }
+    const display = document.getElementById('single-review-display');
+    if (!display) return;
     
-    // Update active classes
-    document.querySelectorAll('.review-card').forEach((card, index) => {
-        if(index === currentReviewIndex) card.classList.add('active-review');
-        else card.classList.remove('active-review');
-    });
+    // Fade out
+    display.style.opacity = '0';
     
-    document.querySelectorAll('.dot').forEach((dot, index) => {
-        if(index === currentReviewIndex) dot.classList.add('active');
-        else dot.classList.remove('active');
-    });
+    setTimeout(() => {
+        const r = mockReviews[currentReviewIndex];
+        display.innerHTML = `
+            <div class="review-stars" style="color: #ffd700; font-size: 1.2rem; margin-bottom: 1rem;">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text" style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem; line-height: 1.8;">"${r.text}"</p>
+            <div class="review-author" style="font-weight: 700; color: white; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                <i class="fab fa-discord" style="color: #5865F2;"></i> @${r.author}
+            </div>
+        `;
+        // Fade in
+        display.style.opacity = '1';
+        
+        // Update active dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            if(index === currentReviewIndex) dot.classList.add('active');
+            else dot.classList.remove('active');
+        });
+    }, 500); // Wait 500ms for fade out before changing content and fading in
 }
 
 function nextReview() {

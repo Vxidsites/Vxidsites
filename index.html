@@ -69,11 +69,11 @@
                 
                 <div class="reviews-section fade-in" style="margin-top: 4rem; width: 100%; position: relative; z-index: 10;">
                     <h3 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">Customer Vouchs</h3>
-                    <div class="reviews-slider-container glass" style="display: block; overflow: hidden; position: relative; max-width: 800px; margin: 0 auto; padding: 2rem;">
-                        <div class="reviews-track" id="reviews-track" style="display: flex; flex-direction: row; transition: transform 0.5s ease-in-out; width: 100%;">
-                            <!-- Reviews injected via JS -->
+                    <div class="reviews-slider-container glass" style="display: flex; flex-direction: column; justify-content: center; align-items: center; max-width: 600px; margin: 0 auto; padding: 2rem; min-height: 250px;">
+                        <div id="single-review-display" style="width: 100%; text-align: center; transition: opacity 0.5s ease;">
+                            <!-- Review injected via JS -->
                         </div>
-                        <div class="slider-controls" style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 1rem;">
+                        <div class="slider-controls" style="display: flex; justify-content: center; align-items: center; gap: 1.5rem; margin-top: 2rem;">
                             <button class="slider-btn" onclick="prevReview()" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">&#8592;</button>
                             <div class="slider-dots" id="slider-dots" style="display: flex; gap: 0.5rem;"></div>
                             <button class="slider-btn" onclick="nextReview()" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">&#8594;</button>
