@@ -1,7 +1,5 @@
 // Mock Data for VxidSites
 
-// Mock Data for VxidSites
-
 const mockProjects = [
     { 
         id: "vxid-tweaks",
@@ -88,12 +86,6 @@ function navigateTo(sectionId) {
 }
 
 // GTA 5 Services Form Logic
-function copyCryptoAddress() {
-    const address = document.getElementById('ltc-address').textContent;
-    navigator.clipboard.writeText(address).then(() => {
-        alert('Bitcoin Address copied to clipboard!');
-    });
-}
 function submitSocialClub() {
     const input = document.getElementById('sc-input');
     if (input && input.value.trim() !== '') {
@@ -368,25 +360,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
- / /   C r y p t o   M o d a l   L o g i c 
- f u n c t i o n   o p e n C r y p t o M o d a l ( p r i c e )   { 
-         c o n s t   m o d a l   =   d o c u m e n t . g e t E l e m e n t B y I d ( ' c r y p t o - m o d a l ' ) ; 
-         c o n s t   p r i c e T e x t   =   d o c u m e n t . g e t E l e m e n t B y I d ( ' m o d a l - p r i c e ' ) ; 
-         
-         p r i c e T e x t . t e x t C o n t e n t   =   ' $ '   +   p r i c e ; 
-         m o d a l . c l a s s L i s t . r e m o v e ( ' h i d d e n ' ) ; 
- } 
- 
- f u n c t i o n   c l o s e C r y p t o M o d a l ( )   { 
-         c o n s t   m o d a l   =   d o c u m e n t . g e t E l e m e n t B y I d ( ' c r y p t o - m o d a l ' ) ; 
-         m o d a l . c l a s s L i s t . a d d ( ' h i d d e n ' ) ; 
- } 
- 
- f u n c t i o n   c o p y C r y p t o A d d r e s s ( )   { 
-         c o n s t   a d d r e s s   =   d o c u m e n t . g e t E l e m e n t B y I d ( ' l t c - a d d r e s s ' ) . t e x t C o n t e n t ; 
-         n a v i g a t o r . c l i p b o a r d . w r i t e T e x t ( a d d r e s s ) . t h e n ( ( )   = >   { 
-                 a l e r t ( ' L i t e c o i n   A d d r e s s   c o p i e d   t o   c l i p b o a r d ! ' ) ; 
-         } ) ; 
- } 
-  
- 
+// Crypto Modal Logic
+function openCryptoModal(price) {
+    const modal = document.getElementById('crypto-modal');
+    const priceText = document.getElementById('modal-price');
+    
+    priceText.textContent = '$' + price;
+    modal.classList.remove('hidden');
+}
+
+function closeCryptoModal() {
+    const modal = document.getElementById('crypto-modal');
+    modal.classList.add('hidden');
+}
+
+function copyCryptoAddress() {
+    const address = document.getElementById('ltc-address').textContent;
+    navigator.clipboard.writeText(address).then(() => {
+        alert('Bitcoin Address copied to clipboard!');
+    });
+}
