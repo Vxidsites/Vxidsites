@@ -479,7 +479,8 @@ document.addEventListener('DOMContentLoaded', () => {
 const clickSound = new Audio('ui-soft-click-brukowskij-soft-keyboard-click-gentle-computer-input-2-0m00s.mp3');
 
 document.addEventListener('click', (e) => {
-    if (e.target.closest('.btn') || e.target.closest('button') || e.target.closest('.slider-btn') || e.target.closest('.mobile-menu-btn')) {
+    // Play sound if any button or close icon is clicked
+    if (e.target.closest('.btn') || e.target.closest('button') || e.target.closest('.slider-btn') || e.target.closest('.mobile-menu-btn') || e.target.closest('.close-modal')) {
         clickSound.currentTime = 0;
         clickSound.play().catch(err => console.log('Audio play prevented:', err));
     }
