@@ -383,14 +383,14 @@ function copyCryptoAddress() {
 
 // Fake Reviews Data (8 reviews)
 const mockReviews = [
-    { author: "GhostHunter99", text: "Vouch. Bro got me the 3.1M in literally 2 minutes. Easiest money I've ever made in this game." },
-    { author: "Er0nzii", text: "Was skeptical at first but he actually instant-finished the heist and gave me the 100% cut. Buying the VIP tier next week." },
-    { author: "Shadow_Sniper", text: "Fastest carry I've ever seen. Didn't even have to leave my apartment in game and the money dropped." },
-    { author: "Tox1c", text: "Legit. Recommending to my whole crew so we can finally buy the new oppressors." },
-    { author: "DarkAngel23", text: "Honestly the best service out here. Zero bans, zero issues, just straight cash to Maze Bank." },
-    { author: "xX_Demon_Xx", text: "Bought the Pro tier for $5. Got all 6 heists done in under 15 minutes. This guy is insane with the mod menu." },
-    { author: "LamarEnjoyer", text: "Bro actually came through. I thought it was a scam but he did the free trial and I instantly bought more." },
-    { author: "GrieferTears", text: "10/10. He told me to just stand there while the menu did all the work. $3.1M payout confirmed." }
+    { author: "skylar33", rating: 5, text: "Vouch. Bro got me the 3.1M in literally 2 minutes. Easiest money I've ever made in this game." },
+    { author: "jayson.x", rating: 4, text: "Was skeptical at first but he actually instant-finished the heist and gave me the 100% cut. Buying the VIP tier next week." },
+    { author: "kaylaa12", rating: 5, text: "Fastest carry I've ever seen. Didn't even have to leave my apartment in game and the money dropped." },
+    { author: "drxg", rating: 5, text: "Legit. Recommending to my whole crew so we can finally buy the new oppressors." },
+    { author: "marcus.d", rating: 4, text: "Honestly the best service out here. Zero bans, zero issues, just straight cash to Maze Bank." },
+    { author: "zayy99", rating: 5, text: "Bought the Pro tier for $5. Got all 6 heists done in under 15 minutes. This guy is insane with the mod menu." },
+    { author: "vinceee", rating: 3, text: "Bro actually came through. I thought it was a scam but he did the free trial and I instantly bought more." },
+    { author: "al3x", rating: 5, text: "10/10. He told me to just stand there while the menu did all the work. $3.1M payout confirmed." }
 ];
 
 let currentReviewIndex = 0;
@@ -416,9 +416,17 @@ function updateSliderPosition() {
     
     setTimeout(() => {
         const r = mockReviews[currentReviewIndex];
+        let starsHtml = '';
+        for (let i = 0; i < r.rating; i++) {
+            starsHtml += '<i class="fas fa-star"></i>';
+        }
+        for (let i = r.rating; i < 5; i++) {
+            starsHtml += '<i class="far fa-star"></i>';
+        }
+        
         display.innerHTML = `
             <div class="review-stars" style="color: #ffd700; font-size: 1.2rem; margin-bottom: 1rem;">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                ${starsHtml}
             </div>
             <p class="review-text" style="font-size: 1.1rem; font-style: italic; margin-bottom: 1.5rem; line-height: 1.8;">"${r.text}"</p>
             <div class="review-author" style="font-weight: 700; color: white; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
