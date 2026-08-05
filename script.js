@@ -383,14 +383,14 @@ function copyCryptoAddress() {
 
 // Fake Reviews Data (8 reviews)
 const mockReviews = [
-    { author: "skylar33", rating: 5, text: "Vouch. Literally loaded into the heist and he hit a button and it was over. Easiest 3.1M ever." },
-    { author: "jayson.x", rating: 4, text: "Bro wasn't lying. Didn't even have to leave the arcade, he just instant finished it from the start." },
-    { author: "kaylaa12", rating: 5, text: "Fastest run possible. We spawned in, the screen went black, and 3.1M was in my bank." },
-    { author: "drxg", rating: 5, text: "Legit. Didn't have to walk a single step, he just clicked instant finish right at the start." },
-    { author: "marcus.d", rating: 4, text: "W service. You literally just load in and he skips the entire mission giving u the 3 mil." },
-    { author: "zayy99", rating: 5, text: "Bought the Pro tier. He instantly finished all 6 heists back to back in like 5 minutes." },
-    { author: "vinceee", rating: 3, text: "Thought it was a scam but nah we loaded in and the heist just ended giving me 3.1m free." },
-    { author: "al3x", rating: 5, text: "Loaded in, he clicked instant finish, got my 3.1M for free. 10/10." }
+    { author: "skylar33", rating: 5, text: "Vouch. Literally spawned outside the arcade and he hit a button and it was over. Easiest 3.1M ever." },
+    { author: "jayson.x", rating: 4, text: "Bro wasn't lying. We loaded into the heist outside and he just instant finished it immediately." },
+    { author: "kaylaa12", rating: 5, text: "Fastest run possible. We spawned in, screen went straight to Mission Passed, and 3.1M was in my bank." },
+    { author: "drxg", rating: 5, text: "Legit. Didn't even have to get in a car, he just clicked instant finish right as we spawned." },
+    { author: "marcus.d", rating: 4, text: "W service. You literally just load outside and he skips the entire mission giving u the 3 mil." },
+    { author: "zayy99", rating: 5, text: "Bought the Pro tier. He instantly finished all 6 heists back to back right from the spawn screen." },
+    { author: "vinceee", rating: 3, text: "Thought it was a scam but nah we loaded in outside and the heist just ended giving me 3.1m free." },
+    { author: "al3x", rating: 5, text: "Spawned in, he clicked instant finish, got my 3.1M for free. 10/10." }
 ];
 
 let currentReviewIndex = 0;
