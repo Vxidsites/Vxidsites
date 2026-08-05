@@ -198,8 +198,22 @@
                 <div class="free-run-form glass fade-in">
                     <h3>Want a Free Trial?</h3>
                     <p>Every single heist guarantees you <strong>$3.1M GTA$</strong>.</p>
-                    <p style="margin-top: 1rem;">To claim your free first run, simply DM <strong>nx5hh</strong> on Discord!</p>
+                    <p style="margin-bottom: 1rem;">To claim your free first run, simply DM <strong>nx5hh</strong> on Discord!</p>
                     <a href="https://discord.com/app" target="_blank" onclick="navigator.clipboard.writeText('nx5hh'); alert('Discord Username \'nx5hh\' copied to clipboard!');" class="btn btn-primary" style="margin-top: 1.5rem;"><i class="fab fa-discord"></i> Message nx5hh on Discord</a>
+                </div>
+                
+                <div class="reviews-section fade-in" style="margin-top: 4rem;">
+                    <h3 style="text-align: center; margin-bottom: 2rem; font-size: 2rem;">Customer Vouchs</h3>
+                    <div class="reviews-slider-container glass">
+                        <div class="reviews-track" id="reviews-track">
+                            <!-- Reviews injected via JS -->
+                        </div>
+                        <div class="slider-controls">
+                            <button class="slider-btn" onclick="prevReview()"><i class="fas fa-chevron-left"></i></button>
+                            <div class="slider-dots" id="slider-dots"></div>
+                            <button class="slider-btn" onclick="nextReview()"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
                 </div>
             </section>
 

@@ -380,3 +380,93 @@ function copyCryptoAddress() {
         alert('Bitcoin Address copied to clipboard!');
     });
 }
+
+// Fake Reviews Data (8 reviews)
+const mockReviews = [
+    { author: "GhostHunter99", text: "Vouch. Bro got me the 3.1M in literally 2 minutes. Easiest money I've ever made in this game." },
+    { author: "Er0nzii", text: "Was skeptical at first but he actually instant-finished the heist and gave me the 100% cut. Buying the VIP tier next week." },
+    { author: "Shadow_Sniper", text: "Fastest carry I've ever seen. Didn't even have to leave my apartment in game and the money dropped." },
+    { author: "Tox1c", text: "Legit. Recommending to my whole crew so we can finally buy the new oppressors." },
+    { author: "DarkAngel23", text: "Honestly the best service out here. Zero bans, zero issues, just straight cash to Maze Bank." },
+    { author: "xX_Demon_Xx", text: "Bought the Pro tier for $5. Got all 6 heists done in under 15 minutes. This guy is insane with the mod menu." },
+    { author: "LamarEnjoyer", text: "Bro actually came through. I thought it was a scam but he did the free trial and I instantly bought more." },
+    { author: "GrieferTears", text: "10/10. He told me to just stand there while the menu did all the work. $3.1M payout confirmed." }
+];
+
+let currentReviewIndex = 0;
+let reviewInterval;
+
+function renderReviews() {
+    const track = document.getElementById('reviews-track');
+    const dotsContainer = document.getElementById('slider-dots');
+    if (!track || !dotsContainer) return;
+
+    // Create cards
+    track.innerHTML = mockReviews.map((r, i) => `
+        <div class="review-card ${i === 0 ? 'active-review' : ''}" data-index="${i}">
+            <div class="review-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"${r.text}"</p>
+            <div class="review-author">
+                <i class="fab fa-discord" style="color: #5865F2;"></i> @${r.author}
+            </div>
+        </div>
+    `).join('');
+
+    // Create dots
+    dotsContainer.innerHTML = mockReviews.map((_, i) => `
+        <div class="dot ${i === 0 ? 'active' : ''}" onclick="goToReview(${i})"></div>
+    `).join('');
+
+    startReviewSlider();
+}
+
+function updateSliderPosition() {
+    const track = document.getElementById('reviews-track');
+    if(track) {
+        track.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
+    }
+    
+    // Update active classes
+    document.querySelectorAll('.review-card').forEach((card, index) => {
+        if(index === currentReviewIndex) card.classList.add('active-review');
+        else card.classList.remove('active-review');
+    });
+    
+    document.querySelectorAll('.dot').forEach((dot, index) => {
+        if(index === currentReviewIndex) dot.classList.add('active');
+        else dot.classList.remove('active');
+    });
+}
+
+function nextReview() {
+    currentReviewIndex = (currentReviewIndex + 1) % mockReviews.length;
+    updateSliderPosition();
+    resetSliderInterval();
+}
+
+function prevReview() {
+    currentReviewIndex = (currentReviewIndex - 1 + mockReviews.length) % mockReviews.length;
+    updateSliderPosition();
+    resetSliderInterval();
+}
+
+function goToReview(index) {
+    currentReviewIndex = index;
+    updateSliderPosition();
+    resetSliderInterval();
+}
+
+function startReviewSlider() {
+    reviewInterval = setInterval(nextReview, 5000);
+}
+
+function resetSliderInterval() {
+    clearInterval(reviewInterval);
+    startReviewSlider();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(renderReviews, 100);
+});
