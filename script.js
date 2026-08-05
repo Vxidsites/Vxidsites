@@ -403,7 +403,7 @@ function renderReviews() {
 
     // Create cards
     track.innerHTML = mockReviews.map((r, i) => `
-        <div class="review-card ${i === 0 ? 'active-review' : ''}" data-index="${i}">
+        <div class="review-card ${i === 0 ? 'active-review' : ''}" data-index="${i}" style="flex: 0 0 100%; box-sizing: border-box;">
             <div class="review-stars">
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
