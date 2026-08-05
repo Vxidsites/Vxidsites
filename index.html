@@ -166,7 +166,7 @@
                             <li><strong style="color: var(--accent-primary);">Earn $9.3M GTA$</strong></li>
                             <li>Fast Completion</li>
                         </ul>
-                        <a href="STRIPE_LINK_2_DOLLARS_HERE" target="_blank" class="btn btn-outline"><i class="fab fa-stripe-s"></i> Buy with Stripe</a>
+                        <button onclick="openCryptoModal('2')" class="btn btn-outline"><i class="fab fa-bitcoin"></i> Pay with Crypto</button>
                     </div>
                     
                     <!-- Pro -->
@@ -179,7 +179,7 @@
                             <li><strong style="color: var(--accent-primary);">Earn $18.6M GTA$</strong></li>
                             <li>Priority Completion</li>
                         </ul>
-                        <a href="STRIPE_LINK_5_DOLLARS_HERE" target="_blank" class="btn btn-primary"><i class="fab fa-stripe-s"></i> Buy with Stripe</a>
+                        <button onclick="openCryptoModal('5')" class="btn btn-primary"><i class="fab fa-bitcoin"></i> Pay with Crypto</button>
                     </div>
                     
                     <!-- VIP -->
@@ -191,7 +191,7 @@
                             <li><strong style="color: var(--accent-primary);">Earn $151.9M GTA$</strong></li>
                             <li>Maximum Priority</li>
                         </ul>
-                        <a href="STRIPE_LINK_10_DOLLARS_HERE" target="_blank" class="btn btn-outline"><i class="fab fa-stripe-s"></i> Buy with Stripe</a>
+                        <button onclick="openCryptoModal('10')" class="btn btn-outline"><i class="fab fa-bitcoin"></i> Pay with Crypto</button>
                     </div>
                 </div>
 
@@ -232,6 +232,28 @@
             </div>
         </footer>
     </div>
+
+    <!-- Crypto Checkout Modal -->
+    <div id="crypto-modal" class="modal-overlay hidden">
+        <div class="modal-content glass">
+            <span class="close-modal" onclick="closeCryptoModal()">&times;</span>
+            <h2 style="margin-bottom: 1rem; color: var(--accent-primary);"><i class="fab fa-bitcoin"></i> Crypto Checkout</h2>
+            <p style="margin-bottom: 1.5rem;">To purchase this <strong id="modal-price" style="color: var(--text-light);"></strong> heist package, send exactly that amount of Bitcoin (BTC) to the address below.</p>
+            
+            <div class="crypto-address-box">
+                <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Your Bitcoin (BTC) Address:</span>
+                <div class="address-string" id="ltc-address">bc1q2at9nc25l8l7ca6w4q0xagdxsuxuxnjrj92dm3</div>
+                <button class="btn btn-outline btn-small" onclick="copyCryptoAddress()"><i class="fas fa-copy"></i> Copy Address</button>
+            </div>
+            
+            <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(0,255,136,0.1); border-left: 4px solid var(--accent-primary); border-radius: 4px; font-size: 0.9rem;">
+                <strong>Next Step:</strong> After you send the crypto, click the button below to DM me a screenshot of the transaction on Discord to claim your run!
+            </div>
+            
+            <a href="https://discord.com/app" target="_blank" onclick="navigator.clipboard.writeText('nx5hh'); alert('Discord Username \'nx5hh\' copied to clipboard!');" class="btn btn-primary" style="margin-top: 1.5rem; width: 100%;"><i class="fab fa-discord"></i> Message nx5hh on Discord</a>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
