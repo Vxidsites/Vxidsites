@@ -383,14 +383,14 @@ function copyCryptoAddress() {
 
 // Fake Reviews Data (8 reviews)
 const mockReviews = [
-    { author: "skylar33", rating: 5, text: "Vouch. He teleported us straight to the vault and instantly finished it. Easiest 3.1M I've ever made." },
-    { author: "jayson.x", rating: 4, text: "Was skeptical at first but he actually gave me the 100% cut in the Casino heist. Buying the VIP tier next week." },
-    { author: "kaylaa12", rating: 5, text: "Fastest carry I've ever seen. Skipped all the preps and we finished the finale in like 2 minutes flat." },
-    { author: "drxg", rating: 5, text: "Legit. Recommending to my whole crew so we can finally buy the new oppressors." },
-    { author: "marcus.d", rating: 4, text: "Honestly the best service out here. Used his mod menu to skip the guards and I just grabbed the gold." },
-    { author: "zayy99", rating: 5, text: "Bought the Pro tier for $5. Got all 6 heists done so fast. This guy is insane with the mod menu." },
-    { author: "vinceee", rating: 3, text: "Bro actually came through. I thought it was a scam but he ran the free trial heist and I instantly bought more." },
-    { author: "al3x", rating: 5, text: "10/10. He told me to just follow him in the casino while the menu did all the work. $3.1M payout confirmed." }
+    { author: "skylar33", rating: 5, text: "Vouch. Just stood at the vault door and he instant finished it. Easiest 3.1M ever." },
+    { author: "jayson.x", rating: 4, text: "Bro wasn't lying. I literally just stood there doing nothing and got max payout instantly." },
+    { author: "kaylaa12", rating: 5, text: "Fastest run possible. Teleported to the end, instant finished, 3.1M in my bank." },
+    { author: "drxg", rating: 5, text: "Legit. Didn't have to shoot a single guard, he just instant completed the heist for me." },
+    { author: "marcus.d", rating: 4, text: "W service. You literally just stand there and he skips to the end giving u the 3 mil." },
+    { author: "zayy99", rating: 5, text: "Bought the Pro tier. Just stood AFK while he instant finished 6 heists back to back." },
+    { author: "vinceee", rating: 3, text: "Thought it was a scam but nah he legit instant finished and gave me 3.1m free." },
+    { author: "al3x", rating: 5, text: "Legit stood there, and he instant finished giving me 3.1M for free. 10/10." }
 ];
 
 let currentReviewIndex = 0;
