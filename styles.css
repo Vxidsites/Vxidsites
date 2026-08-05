@@ -797,3 +797,74 @@ footer {
     .page-section { padding: 2rem 1rem; }
     .about-container { flex-direction: column; padding: 2rem; }
 }
+
+/* Crypto Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content {
+    background: rgba(20, 20, 20, 0.95);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.hidden .modal-content {
+    transform: translateY(-20px);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--accent-primary);
+}
+
+.crypto-address-box {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.address-string {
+    font-family: monospace;
+    font-size: 1.1rem;
+    color: var(--accent-primary);
+    word-break: break-all;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: rgba(0, 255, 136, 0.05);
+    border-radius: 4px;
+}
