@@ -328,6 +328,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     if (sidebar) {
         document.addEventListener('mousemove', (e) => {
+            if (window.innerWidth <= 900) return; // Disable hover logic on mobile/tablet
+            
             // Show sidebar if mouse is within 150px of the left edge, OR if mouse is over the sidebar
             if (e.clientX < 150 || sidebar.contains(e.target)) {
                 sidebar.classList.add('show');
