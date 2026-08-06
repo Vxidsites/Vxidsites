@@ -38,6 +38,27 @@ body {
     min-height: 100vh;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    background-size: 100% 4px;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+@keyframes cyber-pulse {
+    0% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.2); }
+    50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.5); }
+    100% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.2); }
+}
+
+.cyber-glow {
+    animation: cyber-pulse 3s infinite ease-in-out;
+}
+
 /* Glassmorphism Utilities */
 .glass {
     background: var(--glass-bg);
@@ -47,7 +68,8 @@ body {
     border-top: 1px solid rgba(255,255,255,0.15);
     border-left: 1px solid rgba(255,255,255,0.15);
     box-shadow: var(--glass-shadow);
-    border-radius: 16px;
+    clip-path: polygon(0 20px, 20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+    border-radius: 0;
 }
 
 /* Typography & General */
@@ -85,6 +107,9 @@ a {
     transition: var(--transition-fast);
     border: none;
     font-size: 1rem;
+    font-family: 'Space Mono', monospace;
+    clip-path: polygon(0 10px, 10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+    border-radius: 0;
 }
 
 .btn-primary {
@@ -94,9 +119,10 @@ a {
 }
 
 .btn-primary:hover {
-    background: #ffffff;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
+    background: #FFD700;
+    color: #000;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+    transform: translateY(-2px) scale(1.02);
 }
 
 .btn-secondary {
@@ -734,9 +760,10 @@ main {
 }
 
 .pricing-price {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Space Mono', monospace;
     color: var(--text-main);
 }
 
