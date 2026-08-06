@@ -25,12 +25,8 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="active" data-section="home">Home</a></li>
-                <li><a href="#projects" data-section="projects">Projects</a></li>
-                <li><a href="#downloads" data-section="downloads">Downloads</a></li>
-                <li><a href="#youtube" data-section="youtube">YT Tutorials</a></li>
                 <li><a href="#gta-services" data-section="gta-services">GTA 5 Services</a></li>
-                <li><a href="#upcoming" data-section="upcoming">Upcoming</a></li>
-                <li><a href="#changelog" data-section="changelog">Changelog</a></li>
+                <li><a href="#youtube" data-section="youtube">YT Tutorials</a></li>
                 <li><a href="#contact" data-section="contact">Contact</a></li>
             </ul>
         </nav>
@@ -45,12 +41,11 @@
 
                 <div class="hero">
                     <div class="hero-content fade-in">
-                        <img src="aurum_icon.jpg" alt="Aurum Heists Logo" style="width: 120px; height: 120px; border-radius: 20px; margin-bottom: 1.5rem; box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);">
+                        <img src="aurum_icon.jpg" alt="Aurum Heists Logo" style="width: 120px; height: 120px; border-radius: 20px; margin-bottom: 1.5rem; box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);">
                         <h1 class="hero-title">Welcome to <span class="accent glow">Aurum Heists</span></h1>
-                        <p class="hero-subtitle">Premium GTA 5 Heist Carries, PC Optimization Scripts, and Custom Software.</p>
+                        <p class="hero-subtitle">The #1 Premium GTA 5 Modded Heists and Account Boosting Service.</p>
                         <div class="hero-buttons">
                             <a href="#gta-services" class="btn btn-primary" onclick="navigateTo('gta-services')">GTA 5 Services</a>
-                            <a href="#projects" class="btn btn-secondary" onclick="navigateTo('projects')">View Projects</a>
                             <a href="#youtube" class="btn btn-outline" onclick="navigateTo('youtube')">YT Tutorials</a>
                         </div>
                         
@@ -87,61 +82,6 @@
                 </div>
             </section>
 
-            <section id="projects" class="page-section hidden">
-                <div class="section-header">
-                    <h2>My Projects</h2>
-                    <p>Websites, Applications, Games, Tools, and Coding projects.</p>
-                </div>
-                <div class="projects-grid" id="projects-container">
-                    <!-- Injected via JS -->
-                </div>
-            </section>
-
-            <section id="project-details" class="page-section hidden">
-                <div class="section-header">
-                    <button class="btn btn-outline" style="margin-bottom: 2rem;" onclick="navigateTo('projects')"><i class="fas fa-arrow-left"></i> Back to Projects</button>
-                    <h2 id="pd-title">Project Title</h2>
-                    <p id="pd-desc">Project Description</p>
-                </div>
-                <div class="glass fade-in" style="padding: 2rem; max-width: 800px; margin: 0 auto;">
-                    <img id="pd-image" src="" alt="Project Screenshot" style="width: 100%; border-radius: 8px; margin-bottom: 2rem; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                    <div style="margin-bottom: 2rem;">
-                        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Overview</h3>
-                        <p id="pd-longdesc" style="line-height: 1.6;"></p>
-                    </div>
-                    <div style="margin-bottom: 2rem;" id="pd-features-container">
-                        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Features</h3>
-                        <ul id="pd-features" style="list-style-position: inside; line-height: 1.8;">
-                        </ul>
-                    </div>
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <a id="pd-download" href="#" download class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;"><i class="fas fa-download"></i> Download Script</a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="downloads" class="page-section hidden">
-                <div class="section-header">
-                    <h2>File Library</h2>
-                    <p>Access my tools, scripts, and resources.</p>
-                </div>
-                <div class="search-container glass">
-                    <i class="fas fa-search"></i>
-                    <input type="text" id="file-search" placeholder="Search files...">
-                </div>
-                <div class="category-filters" id="download-categories">
-                    <button class="filter-btn active" data-category="all">All</button>
-                    <button class="filter-btn" data-category="tools">Tools</button>
-                    <button class="filter-btn" data-category="scripts">Scripts</button>
-                    <button class="filter-btn" data-category="resources">Resources</button>
-                    <button class="filter-btn" data-category="games">Game Projects</button>
-                    <button class="filter-btn" data-category="utilities">Utilities</button>
-                </div>
-                <div class="downloads-list" id="downloads-container">
-                    <!-- Injected via JS -->
-                </div>
-            </section>
-
             <section id="youtube" class="page-section hidden">
                 <div class="section-header">
                     <h2>YT Tutorials</h2>
@@ -150,21 +90,9 @@
                 </div>
                 <div class="category-filters" id="youtube-categories" style="margin-bottom: 2rem; justify-content: center;">
                     <button class="filter-btn active" data-category="all">All</button>
-                    <button class="filter-btn" data-category="gta">GTA</button>
-                    <button class="filter-btn" data-category="hacked-clients">Hacked Clients</button>
-                    <button class="filter-btn" data-category="tutorials">Tutorials</button>
+                    <button class="filter-btn" data-category="gta">GTA 5</button>
                 </div>
                 <div class="video-grid" id="youtube-container">
-                    <!-- Injected via JS -->
-                </div>
-            </section>
-
-            <section id="upcoming" class="page-section hidden">
-                <div class="section-header">
-                    <h2>Upcoming Releases</h2>
-                    <p>What I am currently building.</p>
-                </div>
-                <div class="upcoming-list" id="upcoming-container">
                     <!-- Injected via JS -->
                 </div>
             </section>
@@ -203,28 +131,14 @@
                             <li><strong style="color: var(--accent-primary);">Earn ~20M GTA$ Everyday</strong></li>
                             <li>Skip-the-Line Priority Queue</li>
                             <li>Account Ban Insurance</li>
+                            <li>Free Modded Outfit Selection</li>
+                            <li>Access to VIP-Only Giveaways</li>
+                            <li>Private Modded Car Drop Sessions</li>
                         </ul>
                         <button onclick="openCryptoModal('10')" class="btn btn-primary" style="margin-top: 1rem;"><i class="fab fa-bitcoin"></i> Buy VIP with Crypto</button>
                     </div>
                 </div>
 
-                <div class="free-run-form glass fade-in">
-                    <h3>Want a Free Trial?</h3>
-                    <p>Every single heist guarantees you <strong>$3.1M GTA$</strong>.</p>
-                    <p style="margin-bottom: 1rem;">To claim your free first run, join our Discord server and open a ticket!</p>
-                    <a href="https://discord.gg/S93Grt8vP" target="_blank" class="btn btn-primary" style="margin-top: 1.5rem;"><i class="fab fa-discord"></i> Join Discord Server</a>
-                </div>
-            </section>
-
-            <section id="changelog" class="page-section hidden">
-                <div class="section-header">
-                    <h2>Updates & Changelog</h2>
-                    <p>Development news and release notes.</p>
-                </div>
-                <div class="timeline" id="changelog-container">
-                    <!-- Injected via JS -->
-                </div>
-            </section>
 
             <section id="contact" class="page-section hidden">
                 <div class="section-header">
