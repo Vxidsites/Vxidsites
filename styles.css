@@ -2,8 +2,8 @@
     /* Color Palette - Monochrome Liquid Glass */
     --bg-main: #000000;
     --bg-secondary: #050505;
-    --accent-primary: #ffffff;
-    --accent-secondary: #888888;
+    --accent-primary: #FFD700;
+    --accent-secondary: #B8860B;
     --text-main: #ffffff;
     --text-muted: #9ca3af;
     
@@ -131,7 +131,7 @@ a {
     left: 1rem;
     z-index: 2000;
     background: rgba(20,20,20,0.9);
-    border: 1px solid rgba(0, 255, 136, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.3);
     color: white;
     padding: 0.5rem 0.8rem;
     border-radius: 8px;
@@ -294,9 +294,8 @@ main {
 .bg-grid {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(255, 215, 0, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 215, 0, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
     z-index: -1;
     mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
@@ -856,7 +855,7 @@ footer {
     background: rgba(20, 20, 20, 0.95);
     padding: 2.5rem;
     border-radius: 12px;
-    border: 1px solid rgba(0, 255, 136, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.3);
     max-width: 500px;
     width: 90%;
     position: relative;
@@ -898,7 +897,7 @@ footer {
     word-break: break-all;
     margin: 1rem 0;
     padding: 0.5rem;
-    background: rgba(0, 255, 136, 0.05);
+    background: rgba(255, 215, 0, 0.05);
     border-radius: 4px;
 }
 
