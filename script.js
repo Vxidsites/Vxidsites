@@ -283,29 +283,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Mobile menu toggle
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    if (mobileBtn) {
-        mobileBtn.addEventListener('click', () => {
-            const navLinks = document.querySelector('.nav-links');
-            if(navLinks) {
-                // simple toggle inline style for mobile (ideally done via CSS class)
-                if (navLinks.style.display === 'flex') {
-                    navLinks.style.display = 'none';
-                } else {
-                    navLinks.style.display = 'flex';
-                    navLinks.style.flexDirection = 'column';
-                    navLinks.style.position = 'absolute';
-                    navLinks.style.top = '70px';
-                    navLinks.style.left = '0';
-                    navLinks.style.width = '100%';
-                    navLinks.style.background = 'var(--bg-main)';
-                    navLinks.style.padding = '2rem';
-                    navLinks.style.borderBottom = '1px solid var(--glass-border)';
-                }
-            }
-        });
-    }
 
     // Download Filters
     document.querySelectorAll('#download-categories .filter-btn').forEach(btn => {
