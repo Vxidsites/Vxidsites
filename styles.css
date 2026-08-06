@@ -787,15 +787,32 @@ footer {
     margin-top: 2rem;
 }
 
-/* Responsive */
+/* Responsive adjustments for Tablets/Laptops */
 @media (max-width: 900px) {
     .navbar { padding: 1rem 2rem; }
     .nav-links { display: none; }
     .mobile-menu-btn { display: block; }
     .hero-title { font-size: 3rem; }
-    .hero-buttons { flex-direction: column; }
+    .hero-buttons { flex-direction: column; gap: 1rem; width: 100%; max-width: 300px; margin: 0 auto; }
+    .hero-buttons .btn { width: 100%; text-align: center; }
     .page-section { padding: 2rem 1rem; }
     .about-container { flex-direction: column; padding: 2rem; }
+    .projects-grid, .video-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+    .pricing-grid, .features-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* Responsive adjustments for Mobile Phones */
+@media (max-width: 600px) {
+    .navbar { padding: 1rem; }
+    .hero-title { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .free-run-form h3 { font-size: 1.5rem; }
+    .form-group { flex-direction: column; }
+    .modal-content { padding: 1.5rem; }
+    .pricing-card, .project-card, .glass { padding: 1.5rem; }
+    .reviews-slider-container { padding: 1rem; }
+    .review-text { font-size: 0.95rem; }
+    .nav-links { top: 60px; padding: 1rem; }
 }
 
 /* Crypto Modal Styles */
