@@ -82,7 +82,8 @@ function navigateTo(sectionId) {
     }
     
     // Close mobile menu if open
-    document.querySelector('.nav-links').classList.remove('mobile-open');
+    const sidebar = document.getElementById('sidebar');
+    if (sidebar) sidebar.classList.remove('show');
 }
 
 // GTA 5 Services Form Logic
