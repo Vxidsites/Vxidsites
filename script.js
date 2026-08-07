@@ -1,8 +1,7 @@
 // Mock Data for VxidSites
 
 const mockVideos = [
-    { title: "YimMenu V2 GTA Mod Menu", url: "https://www.youtube.com/watch?v=3IDIbszLATM&t=23s", id: "3IDIbszLATM", category: "gta" },
-    { title: "Cayo Replay Money Glitch", url: "https://www.youtube.com/watch?v=yWBlp6vId9k", id: "yWBlp6vId9k", category: "gta" }
+    { title: "YimMenu V2 GTA Mod Menu", url: "https://www.youtube.com/watch?v=3IDIbszLATM&t=23s", id: "3IDIbszLATM", category: "gta" }
 ];
 
 // Navigation Logic
